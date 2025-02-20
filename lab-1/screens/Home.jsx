@@ -1,5 +1,5 @@
 import { StyleSheet, TouchableOpacity } from "react-native";
-import { View, Text, Image, FlatList } from "react-native-web";
+import { View, Text, Image, FlatList } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { useState } from "react";
 
@@ -29,9 +29,10 @@ function Home() {
         borderWidth: 1,
         justifyContent: "center",
         alignItems: "center",
-        width: 250,
+        width: "100%",
+        height: "100%",
         rowGap: 10,
-        padding: 10,
+        paddingVertical: 40,
         borderRadius: 10,
       }}
     >
@@ -39,20 +40,21 @@ function Home() {
         style={{
           display: "flex",
           flexDirection: "row",
-          columnGap: 170,
-          fontSize: 40,
+          justifyContent: "space-between",
+          columnGap: 260,
+          // fontSize: 60,
           fontWeight: "bold",
         }}
       >
         <Ionicons
           name="chevron-back-outline"
-          size={20}
+          size={30}
           color="#8080805E"
           style={styles.icon}
         />
         <Ionicons
           name="create-outline"
-          size={20}
+          size={30}
           color="#45a182"
           style={styles.icon}
         />
@@ -62,29 +64,36 @@ function Home() {
           borderColor: "#8080805E",
           borderStyle: "solid",
           borderWidth: 1,
-          borderRadius: 50,
-          padding: 1,
+          borderRadius: "50%",
+          padding: 4,
         }}
       >
         <Image
           source={require("../assets/avatar.jpg")}
           style={{
-            width: 100,
-            height: 100,
-            borderRadius: 50,
+            width: 200,
+            height: 200,
+            borderRadius: "50%",
           }}
         />
       </View>
-      <View style={{ display: "flex", flexDirection: "row" }}>
-        <MaterialIcons name="star" size={10} color="#ffca00" />
-        <MaterialIcons name="star" size={10} color="#ffca00" />
-        <MaterialIcons name="star" size={10} color="#ffca00" />
-        <MaterialIcons name="star" size={10} color="#ffca00" />
-        <MaterialIcons name="star" size={10} color="#ffca00" />
+      <View style={{ display: "flex", flexDirection: "row", columnGap: 2 }}>
+        <MaterialIcons name="star" size={20} color="#ffca00" />
+        <MaterialIcons name="star" size={20} color="#ffca00" />
+        <MaterialIcons name="star" size={20} color="#ffca00" />
+        <MaterialIcons name="star" size={20} color="#ffca00" />
+        <MaterialIcons name="star" size={20} color="#ffca00" />
       </View>
       <View>
-        <Text style={{ fontWeight: "bold" }}>Hager Fathi</Text>
-        <Text style={{ fontWeight: "300", fontSize: 10, textAlign: "center" }}>
+        <Text style={{ fontWeight: "bold", fontSize: 35 }}>Hager Fathi</Text>
+        <Text
+          style={{
+            fontWeight: "300",
+            fontSize: 15,
+            textAlign: "center",
+            paddingTop: 4,
+          }}
+        >
           Cairo, Egypt
         </Text>
       </View>
@@ -104,7 +113,7 @@ function Home() {
       </View>
       <FlatList
         data={data}
-        style={{ width: "100%", paddingHorizontal: 12 }}
+        style={{ width: "100%", paddingHorizontal: 25 }}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View
@@ -121,18 +130,18 @@ function Home() {
             }}
           >
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Ionicons name={item.icon} size={10} color="#45a182" />
+              <Ionicons name={item.icon} size={25} color="#45a182" />
               <Text
                 style={{
                   marginLeft: 6,
                   fontWeight: 300,
-                  fontSize: 10,
+                  fontSize: 16,
                 }}
               >
                 {item.title}
               </Text>
             </View>
-            <Ionicons name="chevron-forward" size={10} color="#45a182" />
+            <Ionicons name="chevron-forward" size={20} color="#45a182" />
           </View>
         )}
       />
@@ -141,16 +150,16 @@ function Home() {
           flexDirection: "row",
           alignItems: "center",
           justifyContent: "flex-start",
-          width: "100%",
-          paddingLeft: 16,
+          width: "90%",
+          paddingLeft: 30,
         }}
       >
-        <Ionicons name="log-out" size={15} color="#8080805E" />
+        <Ionicons name="log-out" size={30} color="#8080805E" />
         <Text
           style={{
             marginLeft: 6,
             fontWeight: 300,
-            fontSize: 10,
+            fontSize: 15,
           }}
         >
           Logout
@@ -162,7 +171,7 @@ function Home() {
           flexDirection: "row",
           justifyContent: "space-around",
           alignItems: "center",
-          paddingVertical: 5,
+          paddingVertical: 20,
           marginTop: 1,
           backgroundColor: "#fff",
           borderTopWidth: 1,
@@ -183,14 +192,14 @@ function Home() {
                   borderRadius: 20,
                 }}
               >
-                <Ionicons name={tab.icon} size={15} color="white" />
-                <Text style={{ color: "white", marginLeft: 6, fontSize: 12 }}>
+                <Ionicons name={tab.icon} size={25} color="white" />
+                <Text style={{ color: "white", marginLeft: 6, fontSize: 16 }}>
                   {tab.label}
                 </Text>
               </View>
             ) : (
               // Inactive Tab Style
-              <Ionicons name={tab.icon} size={15} color="#888" />
+              <Ionicons name={tab.icon} size={25} color="#888" />
             )}
           </TouchableOpacity>
         ))}
@@ -221,8 +230,9 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: 5,
+    padding: 10,
     borderRadius: 5,
+    width: 100,
   },
 });
 

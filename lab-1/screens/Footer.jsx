@@ -8,13 +8,14 @@ function Footer({ value }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        rowGap: 6,
       }}
     >
-      <Text style={{ fontSize: 8, color: "#888" }}>{value}</Text>
-      <View style={{ display: "flex", flexDirection: "row", columnGap: 3 }}>
-        <Ionicons name="logo-facebook" size={8} color="#888" />
-        <Ionicons name="logo-linkedin" size={8} color="#888" />
-        <Ionicons name="logo-twitter" size={8} color="#888" />
+      <Text style={{ fontSize: 16, color: "grey" }}>{value}</Text>
+      <View style={{ display: "flex", flexDirection: "row", columnGap: 6 }}>
+        <Ionicons name="logo-facebook" size={30} color="#888" />
+        <Ionicons name="logo-linkedin" size={30} color="#888" />
+        <Ionicons name="logo-twitter" size={30} color="#888" />
       </View>
     </View>
   );

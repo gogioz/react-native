@@ -1,5 +1,4 @@
-import { Text } from "react-native";
-import { View, Image } from "react-native-web";
+import { Text, View, Image } from "react-native";
 import CustomedButton from "./button";
 import Footer from "./Footer";
 
@@ -8,29 +7,41 @@ const Ui = ({ img, title, desc, button, footer }) => {
   return (
     <View
       style={{
-        borderStyle: "solid",
-        borderWidth: 1,
-        borderColor: "#ddd",
-        borderRadius: 10,
         display: "flex",
         justifyContent: "space-between",
-        height: "400px",
+        height: "100%",
+        width: "100%",
         alignItems: "center",
-        padding: 4,
+        paddingVertical: 60,
       }}
     >
       {title === "Welcome" ? (
-        <View>
-          <Image source={img} />
+        <View style={{ width: "100%" }}>
+          <Image
+            source={img}
+            style={{ width: "fit-content", height: 250, borderRadius: 10 }}
+          />
           <View
             style={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              paddingVertical: 10,
             }}
           >
-            <Text style={{ fontWeight: "bold", fontSize: 20 }}>{title}</Text>
-            <Text style={{ fontWeight: 200, fontSize: 6 }}>{desc}</Text>
+            <Text
+              style={{
+                fontWeight: "bold",
+                fontSize: 38,
+                color: "#7E7CD1FF",
+                letterSpacing: 1,
+              }}
+            >
+              {title}
+            </Text>
+            <Text style={{ fontWeight: 300, fontSize: 14, color: "grey" }}>
+              {desc}
+            </Text>
           </View>
         </View>
       ) : (
@@ -39,7 +50,10 @@ const Ui = ({ img, title, desc, button, footer }) => {
       {button.toLowerCase() === "log in" && (
         <View style={{ paddingHorizontal: 10, width: "100%" }}>
           <View>
-            <Image source={img} />
+            <Image
+              source={img}
+              style={{ width: "fit-content", height: 250, borderRadius: 10 }}
+            />
             <View
               style={{
                 display: "flex",
@@ -48,40 +62,52 @@ const Ui = ({ img, title, desc, button, footer }) => {
                 paddingBottom: 10,
               }}
             >
-              <Text style={{ fontWeight: "bold", fontSize: 20 }}>{title}</Text>
-              <Text style={{ fontWeight: 200, fontSize: 6 }}>{desc}</Text>
+              <Text
+                style={{
+                  fontWeight: "bold",
+                  fontSize: 38,
+                  color: "#7E7CD1FF",
+                  letterSpacing: 1,
+                }}
+              >
+                {title}
+              </Text>
+              <Text style={{ fontWeight: 300, fontSize: 14, color: "grey" }}>
+                {desc}
+              </Text>
             </View>
           </View>
-          <View style={{ marginBottom: 5 }}>
+          <View style={{ marginBottom: 10 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Email:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 5,
+                borderColor: "grey",
+                padding: 25,
                 borderRadius: 5,
               }}
-            >
-              <Text>Email</Text>
-            </View>
+            ></View>
           </View>
           <View style={{ marginBottom: 5 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Password:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 5,
+                borderColor: "grey",
+                padding: 25,
                 borderRadius: 5,
               }}
-            >
-              <Text>Password</Text>
-            </View>
+            ></View>
           </View>
         </View>
       )}
       {button.toLowerCase() === "sign up" && (
         <View style={{ paddingHorizontal: 10, width: "100%" }}>
           <View>
-            <Image source={img} />
+            <Image
+              source={img}
+              style={{ width: "fit-content", height: 250, borderRadius: 10 }}
+            />
             <View
               style={{
                 display: "flex",
@@ -90,46 +116,54 @@ const Ui = ({ img, title, desc, button, footer }) => {
                 paddingBottom: 10,
               }}
             >
-              <Text style={{ fontWeight: "bold", fontSize: 20 }}>{title}</Text>
-              <Text style={{ fontWeight: 200, fontSize: 6 }}>{desc}</Text>
+              <Text
+                style={{
+                  fontWeight: "bold",
+                  fontSize: 38,
+                  color: "#7E7CD1FF",
+                  letterSpacing: 1,
+                }}
+              >
+                {title}
+              </Text>
+              <Text style={{ fontWeight: 300, fontSize: 14, color: "grey" }}>
+                {desc}
+              </Text>
             </View>
           </View>
           <View style={{ marginBottom: 5 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Full name:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 5,
+                borderColor: "grey",
+                padding: 25,
                 borderRadius: 5,
               }}
-            >
-              <Text>Full name</Text>
-            </View>
+            ></View>
           </View>
 
           <View style={{ marginBottom: 5 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Email:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 5,
+                borderColor: "grey",
+                padding: 25,
                 borderRadius: 5,
               }}
-            >
-              <Text>Email</Text>
-            </View>
+            ></View>
           </View>
           <View style={{ marginBottom: 5 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Password:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 5,
+                borderColor: "grey",
+                padding: 25,
                 borderRadius: 5,
               }}
-            >
-              <Text>Password</Text>
-            </View>
+            ></View>
           </View>
         </View>
       )}
