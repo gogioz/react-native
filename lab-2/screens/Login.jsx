@@ -37,8 +37,11 @@ const Login = () => {
         <View
           style={{ display: "flex", justifyContent: "space-around", rowGap: 5 }}
         >
-          <View style={{ display: "flex", paddingVertical: 20 }}>
-            <Image source={require("../assets/login.png")} />
+          <View style={{ display: "flex", paddingVertical: 10 }}>
+            <Image
+              source={require("../assets/login.jpeg")}
+              style={{ width: "fit-content", height: 250, borderRadius: 10 }}
+            />
             <View
               style={{
                 display: "flex",
@@ -47,23 +50,30 @@ const Login = () => {
                 paddingVertical: 10,
               }}
             >
-              <Text style={{ fontWeight: "bold", fontSize: 32 }}>
+              <Text
+                style={{
+                  fontWeight: "bold",
+                  fontSize: 38,
+                  color: "#7E7CD1FF",
+                  letterSpacing: 1,
+                }}
+              >
                 Log in Now
               </Text>
-              <Text style={{ fontWeight: "200", fontSize: 20 }}>
+              <Text style={{ fontWeight: 300, fontSize: 14, color: "grey" }}>
                 Log in to continue using our services
               </Text>
             </View>
           </View>
 
-          <View style={{ marginBottom: 20 }}>
-            <Text style={{ fontSize: 24 }}>Email:</Text>
+          <View style={{ marginBottom: 10 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Email:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 15,
-                borderRadius: 10,
+                borderColor: "grey",
+                padding: 25,
+                borderRadius: 5,
               }}
             >
               <Controller
@@ -87,14 +97,14 @@ const Login = () => {
             )}
           </View>
 
-          <View style={{ marginBottom: 20 }}>
-            <Text style={{ fontSize: 24 }}>Password:</Text>
+          <View style={{ marginBottom: 10 }}>
+            <Text style={{ fontSize: 26, color: "grey" }}>Password:</Text>
             <View
               style={{
                 borderWidth: 1,
-                borderColor: "#ccc",
-                padding: 15,
-                borderRadius: 10,
+                borderColor: "grey",
+                padding: 25,
+                borderRadius: 5,
               }}
             >
               <Controller
@@ -123,18 +133,19 @@ const Login = () => {
           <TouchableOpacity
             onPress={handleSubmit(onSubmit)}
             style={{
-              backgroundColor: "#0C09A9FF",
+              backgroundColor: "#7E7CD1FF",
               borderRadius: 10,
-              padding: 16,
-              margin: 5,
+              marginBottom: 8,
             }}
           >
             <Text
               style={{
                 textAlign: "center",
                 color: "white",
-                fontWeight: "500",
-                fontSize: 26,
+                fontWeight: 500,
+                fontSize: 24,
+                paddingVertical: 8,
+                paddingHorizontal: 16,
               }}
             >
               Submit
@@ -145,17 +156,18 @@ const Login = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
+              rowGap: 6,
             }}
           >
-            <Text style={{ fontSize: 16, color: "#888", paddingVertical: 4 }}>
+            <Text style={{ fontSize: 16, color: "grey" }}>
               Don't have an account? Sign Up
             </Text>
             <View
               style={{ display: "flex", flexDirection: "row", columnGap: 6 }}
             >
-              <Ionicons name="logo-facebook" size={25} color="#888" />
-              <Ionicons name="logo-linkedin" size={25} color="#888" />
-              <Ionicons name="logo-twitter" size={25} color="#888" />
+              <Ionicons name="logo-facebook" size={30} color="grey" />
+              <Ionicons name="logo-linkedin" size={30} color="grey" />
+              <Ionicons name="logo-twitter" size={30} color="grey" />
             </View>
           </View>
         </View>
