@@ -8,13 +8,13 @@ const Login = () => {
   const {
     control,
     handleSubmit,
-    reset, // Add reset function
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     console.log("Login Data:", data);
-    reset(); // Clear input fields after submission
+    reset();
   };
   const nav = useNavigation();
   const goTo = () => {

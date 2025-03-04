@@ -27,18 +27,15 @@ const CartItem = memo(
           paddingHorizontal: 10,
         }}
       >
-        {/* Product Image */}
         <Image
           source={{ uri: item.thumbnail }}
           style={{ width: 50, height: 50, marginRight: 10, borderRadius: 5 }}
         />
 
-        {/* Product Info */}
         <Text style={{ flex: 1, fontSize: 16 }}>
           {item.title} - ${item.price}
         </Text>
 
-        {/* Quantity Controls */}
         <View
           style={{
             flexDirection: "row",
@@ -77,7 +74,6 @@ const CartItem = memo(
           </TouchableOpacity>
         </View>
 
-        {/* Remove Button */}
         <TouchableOpacity
           onPress={handleRemove}
           style={{

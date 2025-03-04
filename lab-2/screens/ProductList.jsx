@@ -46,6 +46,7 @@ function ProductList() {
           {products.map((item) => {
             return (
               <Card
+                key={item.id}
                 id={item.id}
                 thumbnail={item.thumbnail}
                 title={item.title}

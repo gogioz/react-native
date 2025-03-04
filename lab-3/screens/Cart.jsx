@@ -10,7 +10,6 @@ import {
 import useCartStore from "../Store/store";
 
 const CartScreen = () => {
-  // ✅ Import functions from Zustand store
   const {
     cart = [],
     removeFromCart,
@@ -51,7 +50,6 @@ const CartScreen = () => {
                 {item.title} - ${item.price}
               </Text>
 
-              {/* Quantity Controls */}
               <View
                 style={{
                   flexDirection: "row",
@@ -86,7 +84,6 @@ const CartScreen = () => {
                 </TouchableOpacity>
               </View>
 
-              {/* Remove Button */}
               <Button
                 title="Remove"
                 color="gray"

@@ -6,11 +6,10 @@ function Card({ id, thumbnail, title, price }) {
   const nav = useNavigation();
   const addToCart = useCartStore((state) => state.addToCart);
 
-  // Function to handle adding an item to the cart
   const handleAddToCart = () => {
     const newItem = { id, thumbnail, title, price };
-    addToCart(newItem); // Add item to global state
-    nav.navigate("cart"); // Navigate to cart screen
+    addToCart(newItem);
+    nav.navigate("cart");
     console.log(id);
   };
 

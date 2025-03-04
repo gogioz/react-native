@@ -8,7 +8,6 @@ const useCartStore = create((set) => ({
       const existingItemIndex = state.cart.findIndex((i) => i.id === item.id);
 
       if (existingItemIndex !== -1) {
-        // If item exists, increase its quantity
         return {
           cart: state.cart.map((i, index) =>
             index === existingItemIndex
@@ -18,7 +17,6 @@ const useCartStore = create((set) => ({
         };
       }
 
-      // Otherwise, add new item with quantity 1
       return { cart: [...state.cart, { ...item, quantity: 1 }] };
     }),
 

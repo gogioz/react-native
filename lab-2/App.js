@@ -9,8 +9,8 @@ export default function App() {
     <View>
       <StatusBar style="light" backgroundColor="blue" />
 
-      <Login />
-      {/* <ProductList /> */}
+      {/* <Login /> */}
+      <ProductList />
     </View>
   );
 }
